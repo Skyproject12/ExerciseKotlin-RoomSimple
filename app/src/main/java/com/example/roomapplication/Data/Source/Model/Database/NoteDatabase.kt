@@ -1,10 +1,13 @@
 package com.example.roomapplication.Data.Source.Model.Database
 
 import android.content.Context
+import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.roomapplication.Data.Source.Model.Entity.Note
 import com.example.roomapplication.Data.Source.Model.NoteDao
 
+@Database(entities = [Note::class], version = 1)
 abstract class NoteDatabase : RoomDatabase() {
     // defination dao
     abstract fun noteDao(): NoteDao
